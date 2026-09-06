@@ -3,15 +3,8 @@ dna='ATGCGTACGTTAGCTA'
 length= len(dna)
 print("DNA lenght =", length)
 #give access to indiviual characters
-for base in dna:
-    print(base)
-
-
-print("A:", dna.count("A"))
-print("T:", dna.count("T"))
-print("G:", dna.count("G"))
-print("C:", dna.count("C"))
-# count the G+C content 
+for base in 'ATGC':
+    print(base, ':', dna.count(base))
 
 def gc_content(dna):
     g = dna.count("G")
@@ -20,3 +13,9 @@ def gc_content(dna):
     return (g + c) / len(dna) * 100
 result = gc_content(dna)
 print ('GC content:' ,result,'%')
+def at_content(dna):
+    a = dna.count("A")
+    t = dna.count("T")
+
+    return (a + t) / len(dna) * 100
+print("A + T Content:", at_content(dna), "%")
