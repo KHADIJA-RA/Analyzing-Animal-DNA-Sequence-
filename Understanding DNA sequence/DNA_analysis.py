@@ -11,11 +11,20 @@ def gc_content(dna):
     c = dna.count("C")
 
     return (g + c) / len(dna) * 100
+print("GC content",gc_content(dna),'%')
 result = gc_content(dna)
-print ('GC content:' ,result,'%')
 def at_content(dna):
     a = dna.count("A")
     t = dna.count("T")
 
     return (a + t) / len(dna) * 100
 print("A + T Content:", at_content(dna), "%")
+
+#Validate the DNA sequence 
+def validate_dna(dna):
+    for base in dna:
+        if base in "ATGC":
+            return True
+
+    return False
+print("valid DNA:",validate_dna(dna))
