@@ -1,4 +1,4 @@
-from complement_dna import complement_dna
+from 04_complement_dna import complement_dna
 
 dna = "ATGCGTACGTTAGCTA"
 def reverse_complement(dna):
